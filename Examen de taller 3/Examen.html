@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización de Producto</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            margin: 0;
+        }
+
+       
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.6s ease-in-out;
+            border: 2px solid #FFDEE9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #4B4B4B;
+            font-weight: 600;
+        }
+
+        h3 {
+            margin-top: 5px;
+            font-size: 18px;
+            color: #8B8B8B;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 14px;
+            color: #B0B0B0;
+            margin-bottom: 20px;
+        }
+
+   
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #6A6A6A;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #4B4B4B;
+            background-color: #FFF8F0;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            border-color: #FFD1DC;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 209, 220, 0.3);
+        }
+
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #FFD1DC;
+        }
+
+     
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(135deg, #FF9A8B, #FF6A88);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #FF6A88, #FF9A8B);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Jose Efrain Martinez Perez 5O</h2>
+    <h3>Cotizar producto</h3>
+    <p>Obtén tu cotización personalizada en segundos.</p>
+    
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre">
+    </div>
+    
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" placeholder="Correo">
+    </div>
+    
+    <div class="form-group">
+        <label for="cantidad">Cantidad de productos</label>
+        <input type="text" id="cantidad" placeholder="Cantidad">
+    </div>
+    
+    <div class="form-group">
+        <label for="tipo-entrega">Tipo de entrega</label>
+        <select id="tipo-entrega">
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+    </div>
+    
+    <div class="checkbox-group">
+        <input type="checkbox" id="terminos">
+        <label for="terminos">Acepto los términos y condiciones</label>
+    </div>
+    
+    <button type="submit">Enviar cotización</button>
+</div>
+
+</body>
+</html>
